@@ -1,0 +1,14 @@
+site:
+  title: "BlogMultiplateform"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/kotlin-webpack/js/developmentExecutable/blogmultiplateform.js"
+      api: "build/libs/blogmultiplateform.jar"
+    prod:
+      script: "build/kotlin-webpack/js/productionExecutable/blogmultiplateform.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
