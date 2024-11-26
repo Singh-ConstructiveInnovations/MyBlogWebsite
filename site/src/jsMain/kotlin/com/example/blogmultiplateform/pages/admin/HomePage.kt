@@ -1,9 +1,12 @@
 package com.example.blogmultiplateform.pages.admin
 
 import androidx.compose.runtime.Composable
+import com.example.blogmultiplateform.components.SidePanel
+import com.example.blogmultiplateform.utils.Constants.PAGE_WIDTH
 import com.example.blogmultiplateform.utils.FONT_FAMILY
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box
+import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -12,6 +15,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.compose.ui.modifiers.height
+import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.core.Page
@@ -26,26 +30,19 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun HomeScreen() {
 //    isUserLoggedIn {
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+
+        Column(
+            modifier = Modifier.fillMaxSize()
+                .maxWidth(PAGE_WIDTH.px)
         ) {
-
-            Box(
-                modifier = Modifier.width(500.px)
-                    .height(500.px)
-                    .background(color = Colors.Red)
-            ) {
-                SpanText(
-                    modifier = Modifier.width(350.px)
-                        .color(color = Colors.Red)
-                        .fontFamily(FONT_FAMILY.ROBOTO)
-                        .textAlign(TextAlign.Center),
-                    text = "Home Page"
-                )
-            }
-
+            SidePanel()
         }
+
+    }
 //    }
 }
 
