@@ -9,6 +9,7 @@ import androidx.compose.runtime.setValue
 import com.example.blogmultiplateform.models.Theme
 import com.example.blogmultiplateform.models.User
 import com.example.blogmultiplateform.models.UserWithoutPassword
+import com.example.blogmultiplateform.navigation.Screen
 import com.example.blogmultiplateform.styles.LoginStyle.baseStyle
 import com.example.blogmultiplateform.utils.FONT_FAMILY
 import com.example.blogmultiplateform.utils.Id
@@ -149,7 +150,7 @@ fun LoginScreen() {
 
                                 user?.let {
                                     rememberLoggedIn(remember = true, user = user)
-                                    context.router.navigateTo("/admin/home")
+                                    context.router.navigateTo(Screen.Home.route)
                                 } ?: run {
                                     errorText = "The User doesn't exist"
                                     delay(3000)

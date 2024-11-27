@@ -26,4 +26,6 @@ object Res {
 object Id {
     const val userNameInput = "usernameInput"
     const val passwordInput = "passwordInput"
+    const val svgParent = "svgParent"
+    const val vectorIcon = "vectorIcon"
 }
