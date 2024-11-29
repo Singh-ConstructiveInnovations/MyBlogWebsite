@@ -8,6 +8,7 @@ import androidx.compose.runtime.setValue
 import com.example.blogmultiplateform.utils.Constants.PAGE_WIDTH
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.ColumnScope
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
@@ -19,7 +20,7 @@ import org.jetbrains.compose.web.css.px
  */
 
 @Composable
-fun AdminPageLayout(content: @Composable () -> Unit) {
+fun AdminPageLayout(content: @Composable ColumnScope.() -> Unit) {
     var overFlowMenu by remember { mutableStateOf(false) }
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -40,9 +41,7 @@ fun AdminPageLayout(content: @Composable () -> Unit) {
                     overFlowMenu = false
                 }
             }
-
             content()
         }
-
     }
 }

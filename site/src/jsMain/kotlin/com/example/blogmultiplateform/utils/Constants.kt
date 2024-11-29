@@ -14,6 +14,8 @@ object FONT_FAMILY {
 object Res {
     object Image {
         const val logo = "/logo.svg"
+        const val create_plus_icon = "/ic_create_plus.svg"
+        const val laugh = "/laugh.png"
     }
 
     object PathIcon {
